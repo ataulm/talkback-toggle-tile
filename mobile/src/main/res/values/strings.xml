@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TalkBack Toggle</string>
+    <string name="label">TalkBack</string>
+    <string name="permission_required_toast">Need to grant permission. Please run:\n\n
+        adb shell pm grant com.ataulm.talkbacktile android.permission.WRITE_SECURE_SETTINGS</string>
+
+</resources>
