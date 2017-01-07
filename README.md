@@ -2,7 +2,7 @@
 
 A quick setting tile (Android N+) to toggle the state of TalkBack.
 
-<img src="web_hi_res_512.png" align="middle">
+![""](web_hi_res_512.png)
 
 :warning: The app needs the Write Secure Settings permission to change the state of accessibility services. After installing the APK, run this command on your PC to grant the permission:
 
