@@ -21,9 +21,10 @@ import android.os.Handler;
 import android.os.Looper;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
-import android.support.annotation.DrawableRes;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.DrawableRes;
 
 import com.novoda.accessibility.AccessibilityServices;
 

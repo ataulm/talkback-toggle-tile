@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId 'com.ataulm.talkbacktile'
         minSdkVersion 24
-        targetSdkVersion 25
+        targetSdkVersion 29
         versionCode 2
         versionName "1.1"
     }
@@ -18,6 +18,7 @@ android {
     }
 
     dependencies {
-        compile 'com.novoda:accessibilitools:1.4.0'
+        implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+        implementation 'com.novoda:accessibilitools:1.4.0'
     }
 }
