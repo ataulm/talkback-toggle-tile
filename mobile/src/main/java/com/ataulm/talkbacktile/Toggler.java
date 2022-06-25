@@ -22,7 +22,7 @@ class Toggler {
 
     void enableTalkBack() {
         try {
-            String enabledServices = Settings.Secure.getString(contentResolver, Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES);
+            String enabledServices = getEnabledAccessibilityServices();
             if (enabledServices.contains(TALKBACK_SERVICE_NAME)) {
                 return;
             }
@@ -35,7 +35,7 @@ class Toggler {
     }
 
     void disableTalkBack() {
-        String enabledServices = Settings.Secure.getString(contentResolver, Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES);
+        String enabledServices = getEnabledAccessibilityServices();
         if (!enabledServices.contains(TALKBACK_SERVICE_NAME)) {
             return;
         }
@@ -49,6 +49,11 @@ class Toggler {
 
         String value = servicesWithoutTalkBack.isEmpty() ? VALUE_DISABLED : VALUE_ENABLED;
         Settings.Secure.putString(contentResolver, Settings.Secure.ACCESSIBILITY_ENABLED, value);
+    }
+
+    private String getEnabledAccessibilityServices() {
+        String value = Settings.Secure.getString(contentResolver, Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES);
+        return value == null ? "" : value;
     }
 
     interface Callback {
